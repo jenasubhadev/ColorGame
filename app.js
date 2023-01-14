@@ -9,7 +9,8 @@ app.get("/",function(req,res){
 	res.render("colorGame");
 });
 
+const PORT=3000;
 
-app.listen(process.env.PORT, process.env.IP,function(){
-	console.log("server has started");
+app.listen(process.env.PORT || PORT, process.env.IP,function(){
+	console.log("server has started", process.env.PORT || PORT);
 });
